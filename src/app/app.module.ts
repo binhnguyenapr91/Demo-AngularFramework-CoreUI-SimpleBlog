@@ -26,10 +26,13 @@ import {
   AppHeaderModule,
   AppFooterModule,
   AppSidebarModule,
-} from '../../dist/@coreui/angular';
+} from '@coreui/angular';
 
 // Import routing module
 import { AppRoutingModule } from './app.routing';
+import { BlogComponent } from './views/blog/blog.component';
+import { BlogListingComponent } from './views/blog-listing/blog-listing.component';
+import { BlogFormComponent } from './views/blog-form/blog-form.component';
 
 
 @NgModule({
@@ -47,6 +50,9 @@ import { AppRoutingModule } from './app.routing';
   declarations: [
     AppComponent,
     ...APP_CONTAINERS,
+    BlogComponent,
+    BlogListingComponent,
+    BlogFormComponent,
   ],
   providers: [{
     provide: LocationStrategy,
