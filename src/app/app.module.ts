@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
-
+import {HttpClientModule} from '@angular/common/http';
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
@@ -45,7 +45,8 @@ import { BlogFormComponent } from './views/blog-form/blog-form.component';
     AppFooterModule,
     AppHeaderModule,
     AppSidebarModule,
-    PerfectScrollbarModule
+    PerfectScrollbarModule,
+    HttpClientModule
   ],
   declarations: [
     AppComponent,

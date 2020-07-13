@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {BlogService} from '../../blog.service';
+import {Blog} from '../../blog';
 
 @Component({
   selector: 'app-blog-listing',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./blog-listing.component.css']
 })
 export class BlogListingComponent implements OnInit {
-
-  constructor() { }
+  blogs: Blog [] = [];
+  constructor(private blogService: BlogService) { }
 
   ngOnInit(): void {
+    this.blogService.getBlogs()
+      .subscribe(next => (this.blogs = next), error => (this.blogs = []));
   }
 
 }
